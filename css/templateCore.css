@@ -130,6 +130,52 @@ display: inline-block;
 .pagination ul li.current a { background: #2ba6cb; color: white; font-weight: bold; cursor: default; }
 .pagination ul li.current a:hover { background: #2ba6cb; }
 
+/* Category grid ---------------------- */
+.row-fluid [class*="span"] {
+	float: left;
+	min-height: 1px;
+	padding: 0 15px;
+	position: relative;
+}
+
+.row-fluid [class*="span"]:first-child {
+    clear: left;
+}
+
+.row-fluid:last-child [class*="span"]:last-child {
+    float: left;
+}
+
+.row-fluid .span1 { width: 100%; }
+
+.row-fluid .span2 { width: 50%; }
+
+.row-fluid .span3 { width: 33.33333%; }
+
+.row-fluid .span4 { width: 25%; }
+
+.row-fluid .span5 { width: 20%; }
+
+.row-fluid .span6 { width: 16.66666%; }
+
+.row-fluid .span7 { width: 14.28571%; }
+
+.row-fluid .span8 { width: 12.5%; }
+
+.row-fluid .span9 { width: 11.11111%; }
+
+.row-fluid .span10 { width: 10%; }
+
+.row-fluid .span11 { width: 9.0909%; }
+
+.row-fluid .span12 { width: 8.33333%; }
+
+@media only screen and (max-width: 767px) {
+	.row-fluid [class*="span"]  {
+		width:100%;	
+	}
+}
+
 /* Form Stuff ---------------------- */
 .registration input, .login input {
 	width:300px;	
