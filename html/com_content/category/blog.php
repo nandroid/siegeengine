@@ -66,17 +66,17 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 		$row = $counter / $this->columns;
 
 		if ($rowcount == 1) : ?>
-		<div class="items-row row cols-<?php echo (int) $this->columns;?> <?php echo 'row-'.$row; ?> row-fluid">
+		<section class="items-row row cols-<?php echo (int) $this->columns;?> <?php echo 'row-'.$row; ?> row-fluid">
 		<?php endif; ?>
-			<div class="item column-<?php echo $rowcount;?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?> span<?php echo (($this->columns));?>">
+			<article class="item column-<?php echo $rowcount;?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?> span<?php echo (($this->columns));?>">
 				<?php
 				$this->item = &$item;
 				echo $this->loadTemplate('item');
 			?>
-			</div><!-- end item -->
+			</article><!-- end item -->
 			<?php $counter++; ?>
 			<?php if (($rowcount == $this->columns) or ($counter == $introcount)): ?>			
-		</div><!-- end row -->
+		</section><!-- end row -->
 			<?php endif; ?>
 	<?php endforeach; ?>
 	<?php endif; ?>
